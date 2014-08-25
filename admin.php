@@ -75,7 +75,7 @@ echo $data;
 echo "</textarea>";
 
 if($_POST['data']){
-	file_put_contents("data.json", $_POST['data']);
+	file_put_contents("data.json", stripslashes($_POST['data']));
 	header("Location: admin.php");
 }
 ?>
